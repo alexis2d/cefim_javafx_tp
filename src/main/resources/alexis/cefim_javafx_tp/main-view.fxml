@@ -22,13 +22,13 @@
                            <VBox prefHeight="37.0" prefWidth="344.0">
                               <children>
                                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Red" />
-                                 <Slider fx:id="redRange" max="255.0" onMouseReleased="#onRedRangeMouseRealeased" prefHeight="14.0" prefWidth="350.0">
+                                 <Slider fx:id="redRange" max="255.0" onMouseDragged="#onRedRangeChanged" onMouseReleased="#onRedRangeChanged" prefHeight="14.0" prefWidth="350.0">
                                     <cursor>
                                        <Cursor fx:constant="HAND" />
                                     </cursor></Slider>
                               </children>
                            </VBox>
-                           <TextField fx:id="redCode" text="0" />
+                           <TextField fx:id="redCode" onKeyReleased="#onRedCodeChanged" text="0" />
                         </children>
                      </HBox>
                      <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
@@ -36,13 +36,13 @@
                            <VBox prefHeight="37.0" prefWidth="344.0">
                               <children>
                                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Green" />
-                                 <Slider fx:id="greenRange" max="255.0" onMouseReleased="#onGreenRangeMouseRealeased" prefHeight="14.0" prefWidth="350.0">
+                                 <Slider fx:id="greenRange" max="255.0" onMouseDragged="#onGreenRangeChanged" onMouseReleased="#onGreenRangeChanged" prefHeight="14.0" prefWidth="350.0">
                                     <cursor>
                                        <Cursor fx:constant="HAND" />
                                     </cursor></Slider>
                               </children>
                            </VBox>
-                           <TextField fx:id="greenCode" text="0" />
+                           <TextField fx:id="greenCode" onKeyReleased="#onGreenCodeChanged" text="0" />
                         </children>
                      </HBox>
                      <HBox alignment="CENTER" fillHeight="false" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
@@ -50,13 +50,13 @@
                            <VBox prefHeight="37.0" prefWidth="344.0">
                               <children>
                                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Blue" />
-                                 <Slider fx:id="blueRange" max="255.0" onMouseReleased="#onBlueRangeMouseRealeased" prefHeight="14.0" prefWidth="350.0">
+                                 <Slider fx:id="blueRange" max="255.0" onMouseDragged="#onBlueRangeChanged" onMouseReleased="#onBlueRangeChanged" prefHeight="14.0" prefWidth="350.0">
                                     <cursor>
                                        <Cursor fx:constant="HAND" />
                                     </cursor></Slider>
                               </children>
                            </VBox>
-                           <TextField fx:id="blueCode" text="0" />
+                           <TextField fx:id="blueCode" onKeyReleased="#onBlueCodeChanged" text="0" />
                         </children>
                      </HBox>
                   </children>
@@ -69,10 +69,10 @@
                      <VBox prefHeight="200.0" prefWidth="100.0">
                         <children>
                            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hex" />
-                           <TextField />
+                           <TextField fx:id="hexCode" onKeyReleased="#onHexCodeChanged" text="#000000" />
                         </children>
                      </VBox>
-                     <Rectangle fx:id="colorRectangle" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="92.0" stroke="BLACK" strokeType="INSIDE" width="239.0">
+                     <Rectangle fx:id="colorRectangle" arcHeight="5.0" arcWidth="5.0" height="92.0" stroke="BLACK" strokeType="INSIDE" width="239.0">
                         <VBox.margin>
                            <Insets />
                         </VBox.margin></Rectangle>
